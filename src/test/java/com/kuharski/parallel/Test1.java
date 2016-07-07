@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class Test1 {
 	
 	
-  @Test(threadPoolSize = 1, invocationCount = 1)     // (1) <-- CHANGE TO THE NUMBER PARALLEL EXECUTIONS YOU WANT.  e.g threadPoolSize = 3, invocationCount = 3  >> RUNS 3 times in PARALLEL
+  @Test(threadPoolSize = 3, invocationCount = 3)     // (1) <-- CHANGE TO THE NUMBER PARALLEL EXECUTIONS YOU WANT.  e.g threadPoolSize = 3, invocationCount = 3  >> RUNS 3 times in PARALLEL
   public void googleTest() throws MalformedURLException {
       //WebDriver driver = new FirefoxDriver();
 	  
@@ -39,9 +39,6 @@ public class Test1 {
 
       // Now submit the form. WebDriver will find the form for us from the element
       element.submit();
-
-      // Check the title of the page
-      System.out.println("Page title is: " + driver.getTitle());
       
       // Google's search is rendered dynamically with JavaScript.
       // Wait for the page to load, timeout after 10 seconds
