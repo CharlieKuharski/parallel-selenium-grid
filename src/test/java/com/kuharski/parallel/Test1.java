@@ -23,7 +23,7 @@ public class Test1 {
 	  // NOTE: change to you own host 
 	  WebDriver driver = new RemoteWebDriver(
               new URL("http://192.168.99.100:4444/wd/hub"),   // (2) <-- CHANGE TO OUT OWN HOST new URL("http://<myHost>:4444/wd/hub")
-              DesiredCapabilities.chrome());
+			  DesiredCapabilities.firefox());
 
       driver.get("http://www.google.com");
 
